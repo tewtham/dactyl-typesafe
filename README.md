@@ -1,8 +1,21 @@
 # Dactyl TypeSafe
 Inspired by the [SafeType](https://safetype.com/index.php) and [dactyl](https://github.com/adereth/dactyl-keyboard) keyboards.
+![both](typesafe-both.jpg)
+![right](typesafe-right.jpg)
+
+# !Warning!
+I have made a lot of changes to the design since I built the first version of this and haven't had a chance to build another yet so build at your own risk!
 
 ## Parts list
-1. 3 [NL-8H ball transfer units](https://www.aliexpress.com/item/32839736943.html)
-2. 2 [4 pole audio sockets](https://www.aliexpress.com/item/4000105730426.html)
-3. 1 [USB A socket](https://www.aliexpress.com/item/32809692203.html)
-4. All the other stuff you need to wire up a [dactyl](https://github.com/adereth/dactyl-keyboard/blob/master/guide/README.org)
+1. [nylon 8mm ball transfer units](https://www.aliexpress.com/item/32839736943.html) * 3 for the trackball.
+2. [non-slip mat](https://www.amazon.com/ROOS-Self-Stick-Anti-Skid-Furniture-Protectors/dp/B01K7JFXAA)
+3. 34mm ball
+    - The heavier the better I think
+3. [adns 9800 laser sensor board](https://www.tindie.com/products/jkicklighter/adns-9800-laser-motion-sensor/)
+4. Nuts and bolts
+    - 16 * countersunk M3 nuts/bolts for holding the case together
+    - 4 * countersunk M8 nuts/bolts and 8 or so 60mm washers for adding weight (see the stl for the bottom pieces for where these go)
+    - 2 * M2 bolts and 6 * M2 nuts for the laser sensor, 10mm
+5. [4 pole audio sockets](https://www.aliexpress.com/item/4000105730426.html) * 2
+6. [micro usb cable](https://www.amazon.com/UGREEN-Adapter-Samsung-Controller-Android/dp/B00N9S9Z0G) with the casing around the female end removed.
+7. All the other stuff to wire a keyboard. I built mine around a teensy 3.5 and an mcp 23017. See [my parts list](teensy3#parts-list)
