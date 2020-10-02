@@ -1,4 +1,7 @@
-# Simple Firmware for teensy 3.5 / mcp 23017 / adns 9800
+# NOTE
+I will probably be *very* slow to respond to any issues around this software, so if you need support and good documentation I would suggest picking some more popular firmware like [qmk](https://github.com/qmk/qmk_firmware)
+
+# Firmware for teensy 3.5 / mcp 23017 / adns 9800
 ## Parts list
 1. [teensy 3.5](https://www.pjrc.com/store/teensy35.html)
 2. [mcp 23017](https://www.amazon.com/MCP23017-input-output-port-expander/dp/B00I6OEWJM)
@@ -14,6 +17,3 @@
   ![render](diagram.jpg)
   Note that depending on how you wire this together, you will probably need to touchup this [mapping from matrix to layout](layout.cpp#L48-L56)
 - the thumb clusters are row 5
-
-# NOTE
-I will probably be *very* slow to respond to any issues around this software, so if you need support and good documentation I would suggest picking some more popular firmware like [qmk](https://github.com/qmk/qmk_firmware)
