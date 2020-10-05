@@ -13,7 +13,7 @@ I have made a lot of changes to the design since I built the first version of th
     - The heavier the better I think
 3. [adns 9800 laser sensor board](https://www.tindie.com/products/jkicklighter/adns-9800-laser-motion-sensor/)
 4. Nuts and bolts
-    - 16 * countersunk M3 nuts/bolts for holding the case together
+    - 16 * countersunk M3.5 nuts/bolts for holding the case together
     - 4 * countersunk M8 nuts/bolts and 8 or so 60mm washers for adding weight (see the stl for the bottom pieces for where these go)
     - 2 * M2 bolts and 6 * M2 nuts for the laser sensor, 10mm
 5. [4 pole audio sockets](https://www.aliexpress.com/item/4000105730426.html) * 2
