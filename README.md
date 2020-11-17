@@ -16,3 +16,9 @@ Inspired by the [SafeType](https://safetype.com/index.php) and [dactyl](https://
 5. [4 pole audio sockets](https://www.aliexpress.com/item/4000105730426.html) * 2
 6. [micro usb cable](https://www.amazon.com/UGREEN-Adapter-Samsung-Controller-Android/dp/B00N9S9Z0G) with the casing around the female end removed.
 7. All the other stuff to wire a keyboard. I built mine around a teensy 3.5 and an mcp 23017. See [my parts list](teensy3#parts-list)
+
+## Assembly notes
+- For the nuts/bolts that hold the case together.
+    1. Put the nut in the little slot and screw in the bolt.
+    2. Fill in the slot with hot glue and let it dry.
+    3. Unscrew the bolt.
