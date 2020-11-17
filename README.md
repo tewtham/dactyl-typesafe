@@ -3,9 +3,6 @@ Inspired by the [SafeType](https://safetype.com/index.php) and [dactyl](https://
 ![both](typesafe-both.jpg)
 ![right](typesafe-right.jpg)
 
-# !Warning!
-I have made a lot of changes to the design since I built the first version of this and haven't had a chance to build another yet so build at your own risk!
-
 ## Parts list
 1. [nylon 8mm ball transfer units](https://www.aliexpress.com/item/32839736943.html) * 3 for the trackball.
 2. [non-slip mat](https://www.amazon.com/ROOS-Self-Stick-Anti-Skid-Furniture-Protectors/dp/B01K7JFXAA)
