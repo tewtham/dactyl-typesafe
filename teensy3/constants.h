@@ -1,7 +1,7 @@
 #ifndef Constants_h
 #define Constants_h
 
-#define NUM_LAYERS 2
+#define NUM_LAYERS 3
 #define NUM_KEYS 64
 
 #define NUM_ROWS 6
