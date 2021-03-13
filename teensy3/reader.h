@@ -3,6 +3,7 @@
 
 #include "./constants.h"
 #include "./mcp.h"
+#include "./keyboard.h"
 
 class Reader {
   private:

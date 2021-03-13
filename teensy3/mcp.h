@@ -2,6 +2,7 @@
 #define Mcp_h
 
 #include "./constants.h"
+#include "./keyboard.h"
 
 class Mcp23017 {
   private:

@@ -13,7 +13,7 @@
 #define beginCommunication() digitalWrite(CS_PIN, LOW);
 #define endCommunication() digitalWrite(CS_PIN, HIGH);
 
-#define RESOLUTION_SETTING 0x0A // 0x29 max, 0x09 default
+#define RESOLUTION_SETTING 0x06 // 0x29 max, 0x09 default
 #define RESOLUTION_SETTING_SCROLL 0x01
 
 #define POWER_UP_RESET 0x3A
@@ -34,6 +34,8 @@
 #define SCROLL_Y_ENABLED (modifiers & MOUSEMOD_SCROLLY) == MOUSEMOD_SCROLLY
 #define SCROLL_ENABLED (SCROLL_X_ENABLED || SCROLL_Y_ENABLED)
 #define SCROLL_ADJ 10.0 // when scrolling, we'll divide the movement by this much
+#define LAYER_SWITCH_SENSITIVITY 5
+#define MOUSE_LAYER 0x01
 
 Adns9800::Adns9800() {
   modifiers = 0x00;
@@ -137,8 +139,12 @@ void Adns9800::updateState() {
   }
   */
 
-  if (Layout.getLayer() != 0x01) {
-    return;
+  if (Layout.getLayer() != MOUSE_LAYER) {
+    if (fabs(x) > LAYER_SWITCH_SENSITIVITY || fabs(y) > LAYER_SWITCH_SENSITIVITY) {
+      Layout.setLayer(MOUSE_LAYER);
+    } else {
+      return;
+    }
   }
   if (!SCROLL_ENABLED) {
     Mouse.move(x, y);
