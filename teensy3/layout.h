@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include "./reader.h"
 #include "./constants.h"
+#include "./keyboard.h"
 
 class LayoutSender {
   private:

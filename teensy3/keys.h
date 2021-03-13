@@ -12,7 +12,7 @@
 #define MOUSE_BUTTON 0x02 // mouse button
 #define MOUSE_MOD 0x03 // mouse modifier
 #define KEY_MOD 0x04 // modifier
-#define TO_LAYER 0x05 // to layer
+#define TO_LAYER 0x05 // to layer. when pressed, switch to layer 2. when released, switch to layer 0.
 #define UNUSED 0x06
 
 class Key {
@@ -32,6 +32,8 @@ class Key {
     int code;
 };
 
+// when pressed, switch to layer 2. when released, switch to layer 0.
+// layer 1 is reached by moving the mouse
 Key layer = Key(TO_LAYER);
 Key unused = Key(UNUSED);
 

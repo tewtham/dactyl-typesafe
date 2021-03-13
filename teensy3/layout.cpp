@@ -9,68 +9,9 @@
 #define CPU_RESTART_VAL 0x5FA0004
 #define CPU_RESTART (*CPU_RESTART_ADDR = CPU_RESTART_VAL);
 
-const Key LAYER_KEYS [NUM_LAYERS][NUM_KEYS] = {{
-// layer 0, left
-unused , unused , unused , unused , unused , unused ,
-tab    , keyQ   , keyW   , keyE   , keyR   , keyT   ,
-minus  , keyA   , keyS   , keyD   , keyF   , keyG   ,
-shift  , keyZ   , keyX   , keyC   , keyV   , keyB   ,
-                  gui    , tilde  , equal  , unused ,
-                           backsp , alt    , home   ,
-                           ctrl   , end    ,
-// layer 0, right
-unused , unused , unused , unused , unused , unused ,
-keyY   , keyU   , keyI   , keyO   , keyP   , backsl ,
-keyH   , keyJ   , keyK   , keyL   , semicl , quote  ,
-keyN   , keyM   , comma  , period , slash  , shift  ,
-lftBrc , rgtBrc , alt , gui ,
-enter  ,
-layer  , space
-},{
-// layer 1, left
-unused , unused , unused , unused , unused , unused,
-esc    , scrollX, unused , up     , unused , unused,
-minus  , scrollY, left   , down   , right  , unused,
-shift  , unused , keyX   , keyC   , keyV   , unused,
-                  gui    , unused , unused , unused,
-                           backsp , alt    , home  ,
-                           ctrl   , end    ,
-// layer 1, right
-unused , unused , unused , unused , unused , unused,
-scrollX, unused , unused , unused , unused , unused,
-scrollY, mouseL , mouseM , mouseR , unused , unused,
-unused , unused , unused , unused , unused , unused,
-unused , unused , alt    , gui    ,
-enter  ,
-layer  , space
-},{
-// layer 2, left
-unused , unused , unused , unused , unused , unused ,
-minus  , bang   , at     , hash   , dola   , perc   ,
-esc    , key1   , key2   , key3   , key4   , key5   ,
-shift  , ply    , vdwn   , vup    , prev   , nex    ,
-                  gui    , unused , unused , unused ,
-                           backsp , alt    , home   ,
-                           ctrl   , end    ,
-// layer 2, right
-unused , unused , unused , unused , unused , unused ,
-cart   , amp    , ast    , lpar   , rpar   , unde  ,
-key6   , key7   , key8   , key9   , key0   , minus ,
-unused , unused , unused , unused , unused , unused ,
-unused , unused , alt    , gui    ,
-unused ,
-layer  , unused
-}};
-
-// Map state col/row to an index in the layout
-const int8_t KEY_MAP [NUM_ROWS][NUM_COLUMNS] = {
-  { 0, 1, 2, 3, 4, 5,     33,34,35,36,37,38},
-  { 6, 7, 8, 9,10,11,     39,40,41,42,43,44},
-  {12,13,14,15,16,17,     45,46,47,48,49,50},
-  {18,19,20,21,22,23,     51,52,53,54,55,56},
-  {24,25,26,27,-1,28,     -1,-1,57,58,59,60},
-  {-1,-1,29,30,32,31,     63,62,61,-1,-1,-1}
-};
+// these macros (LAYER_KEYS and KEY_MAP) are from either "4x6.h" or "5x6.h" depending on what's in "keyboard.h"
+const Key layerKeys [3][NUM_KEYS] = LAYER_KEYS;
+const int8_t keyMap [NUM_ROWS][NUM_COLUMNS] = KEY_MAP;
 
 LayoutSender::LayoutSender() {
   mouseModifiers = 0x00;
@@ -95,7 +36,7 @@ void LayoutSender::updateState() {
     for(uint8_t j = 0; j < NUM_COLUMNS; j++) {
       // if the state of the key has changed
       if(state[i][j] != reader.state[i][j]) {
-        int index = KEY_MAP[i][j];
+        int index = keyMap[i][j];
         // if the key is pressed
         if(reader.state[i][j]) {
           Serial.print(F("press: "));
@@ -121,7 +62,7 @@ void LayoutSender::updateState() {
 }
 
 void LayoutSender::btnPress(uint8_t layer, uint8_t index) {
-  Key key = LAYER_KEYS[layer][index];
+  Key key = layerKeys[layer][index];
 
   switch(key.type) {
     case STANDARD_KEY:
@@ -152,7 +93,7 @@ void LayoutSender::setLayer(uint8_t layer) {
 }
 
 void LayoutSender::btnRelease(uint8_t layer, uint8_t index) {
-  Key key = LAYER_KEYS[layer][index];
+  Key key = layerKeys[layer][index];
 
   switch(key.type) {
     case STANDARD_KEY:

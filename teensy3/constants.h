@@ -1,12 +1,6 @@
 #ifndef Constants_h
 #define Constants_h
 
-#define NUM_LAYERS 3
-#define NUM_KEYS 64
-
-#define NUM_ROWS 6
-#define NUM_COLUMNS 12
-
 #define MOUSEMOD_SCROLLX 0x01
 #define MOUSEMOD_SCROLLY 0x02
 
