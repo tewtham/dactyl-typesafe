@@ -19,14 +19,14 @@ Inspired by the [SafeType](https://safetype.com/index.php) and [dactyl](https://
 ### 5x6 parts
 1. Nuts and bolts
     - 16 * countersunk M3 nuts/bolts for holding the case together
-    - 4 * countersunk M8 nuts/bolts and 8 or so 60mm washers for [adding weight](things/5x6/weight.jpg)
+    - 4 * countersunk M8 nuts/bolts and 8 or so 60mm washers for [adding weight](things/5x6/weight.jpeg)
     - 2 * M2 bolts and 6 * M2 nuts for the laser sensor, 10mm
 
 ### 4x6 parts
 1. Nuts and bolts
     - 14 * countersunk M3 nuts/bolts for holding the case together
     - 3 * M3 nuts/bolts for holding the d-pad in place
-    - 4 * countersunk M8 nuts/bolts and 8 or so 60mm washers for [adding weight](things/5x6/weight.jpg)
+    - 4 * countersunk M8 nuts/bolts and 8 or so 60mm washers for [adding weight](things/5x6/weight.jpeg)
 2. An old controller with a d-pad in it. I used an old dualshock that I picked up at a second hand store for like $3.
 3. [D-pad buttons for a dualshock 4](https://www.aliexpress.com/item/32952683815.html)
 
