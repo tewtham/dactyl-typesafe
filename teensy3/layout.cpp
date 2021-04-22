@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include <Keyboard.h>
-#include <sys/time.h>
 #include "./layout.h"
 #include "./keys.h"
 #include "./adns.h"
