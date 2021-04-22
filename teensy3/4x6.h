@@ -11,47 +11,47 @@
 esc    , keyQ   , keyW   , keyE   , keyR   , keyT   , \
 minus  , keyA   , keyS   , keyD   , keyF   , keyG   , \
 tab    , keyZ   , keyX   , keyC   , keyV   , keyB   , \
-         gui    , tilde  , equal  , unused , unused , \
-                           backsp , del    , home   , \
+         shift  , tilde  , equal  , unused , unused , \
+                           backsp , home   , space  , \
 gui, shift, ctrl, alt
 
 #define LAYER_0_RIGHT \
 keyY   , keyU   , keyI   , keyO   , keyP   , backsl , \
 keyH   , keyJ   , keyK   , keyL   , semicl , quote  , \
 keyN   , keyM   , comma  , period , slash  , shift  , \
-ply    , lftBrc , rgtBrc    , gui    , gui    ,          \
-enter  , space  , layer
+ply    , lftBrc , rgtBrc , alt    , shift  ,          \
+enter  , end    , layer
 
 // ======================= LAYER 1 ==============================
 #define LAYER_1_LEFT \
 esc    , scrollX, unused , up     , unused , unused, \
 minus  , scrollY, left   , down   , right  , unused, \
 tab    , unused , keyX   , keyC   , keyV   , unused, \
-         gui    , unused , unused , unused , unused, \
-                           backsp , del    , home  , \
+         shift  , unused , unused , unused , unused, \
+                           backsp , home   , space , \
 gui, shift, ctrl, alt
 
 #define LAYER_1_RIGHT \
 scrollX, unused , unused , unused , unused , unused, \
 scrollY, mouseL , mouseM , mouseR , unused , unused, \
 unused , unused , unused , unused , unused , unused, \
-unused , unused , alt    , gui    , unused ,         \
-enter  , space  , layer
+ply    , unused , alt    , gui    , unused ,         \
+enter  , end    , layer
 
 // ======================= LAYER 2 ==============================
 #define LAYER_2_LEFT \
 minus  , bang   , at     , hash   , dola   , perc   , \
 esc    , key1   , key2   , key3   , key4   , key5   , \
-shift  , ply    , vdwn   , vup    , prev   , nex    , \
-         gui    , unused , unused , unused , unused , \
-                           backsp , del    , home   , \
+shift  , unused , unused , unused , unused , unused , \
+         shift  , unused , unused , unused , unused , \
+                           backsp , home   , space  , \
 gui, shift, ctrl, alt
 
 #define LAYER_2_RIGHT \
 cart   , amp    , ast    , lpar   , rpar   , unde   , \
 key6   , key7   , key8   , key9   , key0   , minus  , \
 unused , unused , unused , period , unused , unused , \
-unused , unused , alt    , gui    , unused ,          \
+ply    , prev   , nex    , vdwn   , vup    ,          \
 unused , unused , layer
 
 #define LAYER_KEYS {{LAYER_0_LEFT,LAYER_0_RIGHT},{LAYER_1_LEFT,LAYER_1_RIGHT},{LAYER_2_LEFT,LAYER_2_RIGHT}}
@@ -63,7 +63,7 @@ unused , unused , layer
   {12,13,14,15,16,17,     42,43,44,45,46,47}, \
   {18,19,20,21,22,-1,     -1,48,49,50,51,52}, \
   {-1,-1,-1,25,24,23,     53,54,55,-1,-1,-1}, \
-  {-1,-1,28,29,27,26,     -1,-1,-1,-1,-1,-1}  \
+  {-1,-1,27,28,29,26,     -1,-1,-1,-1,-1,-1}  \
 }
 
 #endif
