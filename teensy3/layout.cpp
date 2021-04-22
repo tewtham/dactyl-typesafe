@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <Keyboard.h>
+#include <sys/time.h>
 #include "./layout.h"
 #include "./keys.h"
 #include "./adns.h"
@@ -8,6 +9,8 @@
 #define CPU_RESTART_ADDR (uint32_t *)0xE000ED0C
 #define CPU_RESTART_VAL 0x5FA0004
 #define CPU_RESTART (*CPU_RESTART_ADDR = CPU_RESTART_VAL);
+
+#define DEBOUNCE_MS 6
 
 // these macros (LAYER_KEYS and KEY_MAP) are from either "4x6.h" or "5x6.h" depending on what's in "keyboard.h"
 const Key layerKeys [3][NUM_KEYS] = LAYER_KEYS;
@@ -30,33 +33,39 @@ void LayoutSender::init(void) {
   }
 }
 
+uint32_t lastChange = 0;
+
 void LayoutSender::updateState() {
+  if(millis() - lastChange < DEBOUNCE_MS) return;
+      
   reader.updateState();
   for(uint8_t i = 0; i < NUM_ROWS; i++) {
     for(uint8_t j = 0; j < NUM_COLUMNS; j++) {
-      // if the state of the key has changed
-      if(state[i][j] != reader.state[i][j]) {
-        int index = keyMap[i][j];
-        // if the key is pressed
-        if(reader.state[i][j]) {
-          Serial.print(F("press: "));
-          Serial.print(i, DEC);
-          Serial.print(F(" "));
-          Serial.println(j, DEC);
-          pressedLayer[index] = currentLayer;
-          btnPress(currentLayer, index);
-        } else {
-          Serial.print(F("release: "));
-          Serial.print(i, DEC);
-          Serial.print(F(" "));
-          Serial.println(j, DEC);
-          if (pressedLayer[index] == -1) pressedLayer[index] = currentLayer;
-          btnRelease(pressedLayer[index], index);
-          pressedLayer[index] = -1;
-        }
-        
-        state[i][j] = reader.state[i][j];
+      
+      // if the state of the key has not changed
+      if(state[i][j] == reader.state[i][j]) continue;
+
+      int index = keyMap[i][j];
+      // if the key is pressed
+      if(reader.state[i][j]) {
+        Serial.print(F("press: "));
+        Serial.print(i, DEC);
+        Serial.print(F(" "));
+        Serial.println(j, DEC);
+        pressedLayer[index] = currentLayer;
+        btnPress(currentLayer, index);
+      } else {
+        Serial.print(F("release: "));
+        Serial.print(i, DEC);
+        Serial.print(F(" "));
+        Serial.println(j, DEC);
+        if (pressedLayer[index] == -1) pressedLayer[index] = currentLayer;
+        btnRelease(pressedLayer[index], index);
+        pressedLayer[index] = -1;
       }
+      
+      state[i][j] = reader.state[i][j];
+      lastChange = millis();
     }
   }
 }
