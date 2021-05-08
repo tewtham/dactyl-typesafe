@@ -1,5 +1,5 @@
 # Dactyl TypeSafe
-A vertical split keyboard inspired by the [SafeType](https://safetype.com/index.php) and [dactyl](https://github.com/adereth/dactyl-keyboard) keyboards.
+A vertical split keyboard inspired by the [SafeType](https://safetype.com/index.php) and [dactyl](https://github.com/adereth/dactyl-keyboard).
 ![right](things/4x6/typesafe-right.jpg)
 ![both](things/4x6/typesafe-both.jpg)
 ![top](things/4x6/typesafe-top.jpg)
