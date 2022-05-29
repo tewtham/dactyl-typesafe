@@ -12,7 +12,7 @@ A vertical split keyboard inspired by the [SafeType](https://safetype.com/index.
 1. [adns 9800 laser sensor board](https://www.tindie.com/products/jkicklighter/adns-9800-laser-motion-sensor/)
 1. 2 * [nice!nano](https://nicekeyboards.com/nice-nano/) boards.
 1. [D-pad buttons for a dualshock 4](https://www.aliexpress.com/item/32952683815.html)
-1. 4 * [tact switches](https://www.aliexpress.com/item/1058764733.html)
+1. 4 * [tact switches](https://www.amazon.com/100PCS-6X6x5mm-Silent-Tactile-switches/dp/B07Q4NM6PS)
 1. M3 [heat set inserts](https://www.aliexpress.com/item/2255800878462496.html) and countersunk bolts
 1. M2 nuts/bolts for the laser sensor
 1. [jst connectors](https://www.aliexpress.com/item/2255800221261384.html) for everything (see [wiring](things/4x6-wireless/wiring.jpg))
