@@ -9,14 +9,12 @@ A vertical split keyboard inspired by the [SafeType](https://www.amazon.com/Safe
 1. [non-slip mat](https://www.amazon.com/ROOS-Self-Stick-Anti-Skid-Furniture-Protectors/dp/B01K7JFXAA)
 1. 34mm ball
     - Any 34mm ball will probably work, but I think it's best to use [a replacement trackball](https://www.aliexpress.com/item/4000351102541.html). You will get better response and precision.
-1. [adns 9800 laser sensor board](https://www.tindie.com/products/jkicklighter/adns-9800-laser-motion-sensor/)
+1. [pmw3360 laser sensor board](https://www.tindie.com/products/jkicklighter/pmw3360-motion-sensor/)
 1. 2 * [nice!nano](https://nicekeyboards.com/nice-nano/) boards.
-1. [D-pad buttons for a dualshock 4](https://www.aliexpress.com/item/32952683815.html)
-1. 4 * [tact switches](https://www.amazon.com/100PCS-6X6x5mm-Silent-Tactile-switches/dp/B07Q4NM6PS)
+1. a dualshock style joystick
+    - I had pretty good luck cutting out the joysticks from a broken ds4 someone gave me, but I think you can buy these new also.
 1. M3 [heat set inserts](https://www.aliexpress.com/item/2255800878462496.html) and countersunk bolts
 1. M2 nuts/bolts for the laser sensor
-1. [jst connectors](https://www.aliexpress.com/item/2255800221261384.html) for everything (see [wiring](things/4x6-wireless/wiring.jpg))
+1. [jst connectors](https://www.aliexpress.com/item/2255800221261384.html) for at least the thumb clusters (see [wiring](things/4x6-wireless/wiring.jpg))
 1. A bunch of 95mm width metal plates (see [weights](things/4x6-wireless/weights.jpg))
 1. Some batteries (I used some AA shaped ones so I can remove them)
-
-If you're looking for the old wired design, see [v1](https://github.com/tewtham/dactyl-typesafe/releases/tag/1.0.0).
