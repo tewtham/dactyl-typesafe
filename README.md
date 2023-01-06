@@ -1,8 +1,8 @@
 # Dactyl TypeSafe
 A vertical split keyboard inspired by the [SafeType](https://www.amazon.com/SafeType-Keyboard-Black-Color-V902/dp/B0049PFYWQ) and [dactyl](https://github.com/adereth/dactyl-keyboard).
-![left](things/4x6-wireless/left.JPG)
-![both](things/4x6-wireless/top.JPG)
-![right](things/4x6-wireless/right.JPG)
+![left](things/4x6-wireless/left.jpg)
+![both](things/4x6-wireless/top.jpg)
+![right](things/4x6-wireless/right.jpg)
 
 ## Parts list
 1. [nylon 8mm ball transfer units](https://www.aliexpress.com/item/32839736943.html) * 3 for the trackball.
