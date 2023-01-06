@@ -18,3 +18,12 @@ A vertical split keyboard inspired by the [SafeType](https://www.amazon.com/Safe
 1. [jst connectors](https://www.aliexpress.com/item/2255800221261384.html) for at least the thumb clusters (see [wiring](things/4x6-wireless/wiring.jpg))
 1. A bunch of 95mm width metal plates (see [weights](things/4x6-wireless/weights.jpg))
 1. Some batteries (I used some AA shaped ones so I can remove them)
+
+## Some (light) build instructions
+### wiring
+1. There are a lot of guides for handwiring keyboards out there ([this one seems nice](https://www.crackedthecode.co/a-complete-guide-to-building-a-hand-wired-keyboard/#hand-wiring-your-keyboard)), so for the basics start with one of those.
+    - Make sure to wire around [these spots](avoid_it.png). When we assemble there will be something there. 
+    - I *highly* recommend using colored wire to keep track of everything.
+    - If you want to use [my firmeware](https://github.com/tewtham/dactyl-typesafe-firmware) (at your own risk!), I did a crappy drawing of what the wiring looks like [here](https://github.com/tewtham/dactyl-typesafe-firmware/blob/main/wiring.png). Also, make sure the the diodes are in the right direction: black rings facing the columns.
+    - Since the thumb clusters are separated from everything by the case, I thought is was kind of nice to use [jst connectors](https://www.aliexpress.com/item/2255800221261384.html) to connect them to the rest. This way it can be disassembled without clipping wires.
+1. For the typesafe, besides wiring up the the colums/rows for each half to a n!n, we also need to hook up a laser sensor and joystick. Refer to my [terrible drawing](https://github.com/tewtham/dactyl-typesafe-firmware/blob/main/wiring.png) for what that should look like.
