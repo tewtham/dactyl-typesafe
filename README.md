@@ -28,4 +28,4 @@ A vertical split keyboard inspired by the [SafeType](https://www.amazon.com/Safe
     - Since the thumb clusters are separated from everything by the case, I thought is was kind of nice to use [jst connectors](https://www.aliexpress.com/item/2255800221261384.html) to connect them to the rest. This way it can be disassembled without clipping wires. I'll add some pictures of what that look like.
 1. For the typesafe, besides wiring up the the colums/rows for each half to a n!n, we also need to hook up a laser sensor and joystick. Refer to my [terrible drawing](https://github.com/tewtham/dactyl-typesafe-firmware/blob/main/wiring.png) for what that should look like.
 ### assembly
-I hope it's not too difficult, but I'll add some pictures here once I get a chance to make it all clear.
+// TODO
